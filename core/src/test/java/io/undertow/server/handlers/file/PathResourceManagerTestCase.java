@@ -133,7 +133,7 @@ public class PathResourceManagerTestCase {
                 zos.closeEntry();
             }
 
-            try (FileSystem zipFileSystem = FileSystems.newFileSystem(zipFile, null)) {
+            try (FileSystem zipFileSystem = FileSystems.newFileSystem(zipFile, (ClassLoader) null)) {
 
                 PathResourceManager resourceManager = new PathResourceManager(zipFileSystem.getPath("/dir"));
 
